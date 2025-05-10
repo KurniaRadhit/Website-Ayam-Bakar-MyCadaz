@@ -1,0 +1,46 @@
+{
+    "menuItems": [
+        {
+            "id": 1,
+            "name": "Caesar Salad",
+            "price": 35,
+            "image": "nasgor.jpeg",
+            "description": "Fresh romaine lettuce, croutons, parmesan cheese, and our signature Caesar dressing."
+        },
+        {
+            "id": 2,
+            "name": "Garden Salad",
+            "price": 28,
+            "image": "nasgor.jpeg",
+            "description": "Mixed greens with cucumber, cherry tomatoes, bell peppers, and balsamic vinaigrette."
+        },
+        {
+            "id": 3,
+            "name": "Sautéed Mushrooms",
+            "price": 22,
+            "image": "nasgor.jpeg",
+            "description": "Mushrooms sautéed with garlic, butter, and fresh herbs."
+        },
+        {
+            "id": 4,
+            "name": "BBQ Chicken Pizza",
+            "price": 42,
+            "image": "nasgor.jpeg",
+            "description": "Grilled chicken, red onions, cilantro, and BBQ sauce on a crispy crust."
+        },
+        {
+            "id": 5,
+            "name": "Margherita Pizza",
+            "price": 38,
+            "image": "nasgor.jpeg",
+            "description": "Classic pizza with tomato sauce, fresh mozzarella, basil leaves, and olive oil."
+        },
+        {
+            "id": 6,
+            "name": "Beef Burger",
+            "price": 45,
+            "image": "nasgor.jpeg",
+            "description": "Juicy beef patty with lettuce, tomato, onion, and special sauce on a brioche bun."
+        }
+    ]
+}
