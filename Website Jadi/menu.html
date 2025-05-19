@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Daftar Menu - MyCadaz</title>
+<link href="images/logo-cadaz.jpeg" rel="icon" type="image/x-icon"/>
+<link href="styles.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/><link href="fused_internal_menu.css" rel="stylesheet"/>
+
+</link></head>
+<body class="body-menu">
+<div class="menu-background-menu"></div>
+<div class="glass-container-menu">
+<a class="back-button-menu" href="index.html">
+<i class="fas fa-arrow-left"></i> Back to Home
+        </a>
+<header class="header-menu">
+<h1 class="gallery-title-menu">Daftar Menu</h1>
+<h2 class="gallery-subtitle-menu">Galeri Makanan &amp; Minuman</h2>
+</header>
+<div class="container-menu">
+<div class="gallery-grid-menu" id="foodGallery">
+<!-- Food items will be loaded here -->
+<div class="loading-menu">
+<i class="fas fa-spinner fa-spin"></i> Loading our delicious menu...
+                </div>
+</div>
+</div>
+<footer class="footer-menu">
+<p>© 2025 Ayam Bakar MyCadaz - All rights reserved</p>
+</footer>
+</div>
+<script src="script.js"></script>
+<script>
+        // Add fade-in animation to food items when they load
+        document.addEventListener('DOMContentLoaded', function () {
+            const foodGallery = document.getElementById('foodGallery');
+
+            if ('IntersectionObserver' in window) {
+                const observer = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.style.animation = 'fadeIn 0.5s forwards';
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.2 });
+
+                const checkExist = setInterval(function () {
+                    const foodItems = document.querySelectorAll('.food-item-menu');
+                    if (foodItems.length > 0) {
+                        clearInterval(checkExist);
+                        foodItems.forEach(item => {
+                            observer.observe(item);
+                        });
+                    }
+                }, 100);
+            }
+        });
+    </script>
+</body>
+</html>
